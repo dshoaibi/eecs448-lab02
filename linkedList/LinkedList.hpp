@@ -121,7 +121,6 @@ bool LinkedList<T>::removeBack()
 	bool isRemoved = false;
 
 	/** req #3*/
-	
 	if( size() == 1){
 		m_front = nullptr;
 		m_size--;
@@ -149,6 +148,7 @@ bool LinkedList<T>::removeBack()
 	}
 
 	return(isRemoved);
+	/* changes made for req #3*/
 }	
 
 template <typename T>
