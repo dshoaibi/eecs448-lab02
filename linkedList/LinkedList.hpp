@@ -29,9 +29,9 @@ bool LinkedList<T>::isEmpty() const
 template <typename T>
 int LinkedList<T>::size() const
 {
-	/** req #1*/
+	/**   req #1    */
 	int counter = 0;
-	if(isEmpty())
+	if( isEmpty() )
 		return( 0 );
 	else{
 		Node<T>* temp = m_front;
@@ -41,6 +41,7 @@ int LinkedList<T>::size() const
 			temp = temp->getNext();
 		}
 		return(counter );}
+	/*  End of added code of req #1 */
 }
 
 template <typename T>
@@ -48,19 +49,20 @@ bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
 	bool isFound = false;
-
-	/** req #2*/
-	while( !isFound && temp != nullptr)
+	/**   req #2  on search method  */
+	while(  !isFound && temp != nullptr)
 	{
-		if( temp->getValue() == value){
-			isFound = true;
-			break;
+		 if( temp->getValue() == value){
+			 isFound = true;
+			 break;
 		}
-		else
-			temp = temp->getNext();)
+		 else
+			temp  = temp->getNext();)
+
 	}
 
-	return(isFound);
+	return( isFound );
+       /*  End of added code of req #2 */
 }
 
 template <typename T>
